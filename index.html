@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A0E14" />
+    <meta
+      name="description"
+      content="赛博鸡蛋 —— 汇总国内外可用的免费 AI Tokens 资源，按分类浏览与搜索，快速找到适合的免费额度。"
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>赛博鸡蛋 · 免费 Tokens 资源库</title>
+  </head>
+  <body>
+    <div class="page-bg" aria-hidden="true">
+      <div class="grid-overlay"></div>
+      <div class="glow glow-cyan"></div>
+      <div class="glow glow-pink"></div>
+      <div class="glow glow-green"></div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="container nav-inner">
+        <a class="brand" href="#top" aria-label="赛博鸡蛋 返回首页">
+          <img
+            class="brand-logo"
+            src="./favicon.svg"
+            alt=""
+            width="38"
+            height="38"
+            onerror="this.style.display='none'"
+          />
+          <span class="brand-text">
+            <span class="brand-name">赛博鸡蛋</span>
+            <span class="brand-tag">CYBER EGG</span>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="主导航">
+          <a href="#resources">资源库</a>
+          <a href="#about">关于</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero container" aria-labelledby="heroTitle">
+        <div class="hero-badge"><span class="pulse-dot"></span>免费 TOKENS 资源导航</div>
+        <h1 class="hero-title" id="heroTitle" data-text="赛博鸡蛋">赛博鸡蛋</h1>
+        <p class="hero-subtitle">Collect free tokens, like collecting cyber eggs.</p>
+        <p class="hero-desc">汇总国内外可用的免费 AI Token 资源，一次收集，随时取用。</p>
+
+        <div class="hero-stats" aria-label="资源统计">
+          <div class="stat">
+            <strong id="statTotal">0</strong>
+            <span>资源总数</span>
+          </div>
+          <span class="stat-divider" aria-hidden="true"></span>
+          <div class="stat">
+            <strong id="statDomestic">0</strong>
+            <span>国内资源</span>
+          </div>
+          <span class="stat-divider" aria-hidden="true"></span>
+          <div class="stat">
+            <strong id="statOverseas">0</strong>
+            <span>国外资源</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="resources container" id="resources" aria-labelledby="resourcesTitle">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title" id="resourcesTitle">资源库<span class="title-slash">/</span></h2>
+            <p class="section-hint">额度与有效期均标注核验日期；免费政策变动频繁，使用前请以官网为准</p>
+          </div>
+          <span class="section-index">01 — RESOURCES</span>
+        </div>
+
+        <div class="toolbar">
+          <div class="tabs" role="tablist" aria-label="资源分类">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" data-category="all">
+              全部
+            </button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-category="domestic">
+              国内
+            </button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-category="overseas">
+              国外
+            </button>
+          </div>
+
+          <div class="search-wrap">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8" />
+              <path d="m16 16 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+            <input
+              id="searchInput"
+              class="search-input"
+              type="search"
+              placeholder="搜索名称、额度、标签或来源…"
+              aria-label="搜索资源"
+              autocomplete="off"
+            />
+            <kbd class="search-kbd">/</kbd>
+          </div>
+        </div>
+
+        <div class="result-meta">
+          <span id="resultCount">显示全部资源</span>
+          <div class="meta-actions">
+            <div class="legend" aria-label="信息可信度图例">
+              <span><i class="legend-dot high"></i>官方核验</span>
+              <span><i class="legend-dot medium"></i>交叉核对</span>
+              <span><i class="legend-dot low"></i>待自查</span>
+            </div>
+            <button
+              id="permanentOnly"
+              class="filter-toggle"
+              type="button"
+              aria-pressed="false"
+            >仅长期免费</button>
+            <button id="clearFilters" class="clear-btn" type="button" hidden>清除筛选 ×</button>
+          </div>
+        </div>
+
+        <div class="card-grid" id="cardGrid" aria-live="polite"></div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <div class="empty-egg" aria-hidden="true">◔</div>
+          <p>没有找到匹配的资源</p>
+          <span>换个关键词或分类试试</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="about">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="./favicon.svg" alt="" width="30" height="30" onerror="this.style.display='none'" />
+            <span class="brand-name">赛博鸡蛋</span>
+          </div>
+          <p>一个中立的免费 Token 资源索引，信息以各官网为准。</p>
+        </div>
+        <div class="footer-note">
+          <p>本站为信息聚合，额度与有效期随平台政策变动；标注「待自查」的条目请以官网控制台为准。</p>
+          <p>© 2026 赛博鸡蛋 · CYBER EGG</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

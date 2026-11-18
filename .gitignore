@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+*.local
+.env
+.env.*
+!.env.example
+
+# Caches
+.vite/
+.cache/
+.eslintcache
+*.tsbuildinfo
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Editors & OS
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini
+._*
+
+# Cloudflare local state
+.wrangler/
+.dev.vars
+.dev.vars.*
+
+# IDE project data
+.codebuddy/
